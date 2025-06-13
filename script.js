@@ -1,17 +1,12 @@
 document.getElementById("enquiryForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const formData = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    phone: document.getElementById("phone").value,
-    message: document.getElementById("message").value
-  };
+  const form = new FormData(document.getElementById("enquiryForm"));
 
   fetch("https://script.google.com/macros/s/AKfycbyIYOw2olDsEARGQ_QOh3QVyuxxDKTZdbk1PDDdqULSiqUqhOOKzCPS5HqTE-5opE5p/exec", {
     method: "POST",
-    body: JSON.stringify(formData),
-    headers: { "Content-Type": "application/json" }
+    body: form,
+    // Don't set Content-Type → browser will automatically use multipart/form-data
   })
   .then(response => response.text())
   .then(data => {
@@ -19,7 +14,7 @@ document.getElementById("enquiryForm").addEventListener("submit", function (e) {
     document.getElementById("enquiryForm").reset();
   })
   .catch(error => {
-  alert("There was an error: " + error.message);
-  console.error(error);
-});
+    alert("There was an error. Please try again later.");
+    console.error("Fetch error:", error);
   });
+});
