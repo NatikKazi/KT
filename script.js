@@ -19,7 +19,7 @@ document.getElementById("enquiryForm").addEventListener("submit", function (e) {
     document.getElementById("enquiryForm").reset();
   })
   .catch(error => {
-    alert("There was an error. Please try again later.");
-    console.error(error);
-  });
+  alert("There was an error: " + error.message);
+  console.error(error);
 });
+  });
