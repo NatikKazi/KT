@@ -8,7 +8,7 @@ document.getElementById("enquiryForm").addEventListener("submit", function (e) {
     message: document.getElementById("message").value
   };
 
-  fetch("https://script.google.com/macros/s/AKfycbzJp5BF2KezSLm4LQkaegcRQtyRwf0bcrm4fgFS-iQ6lQXmIXQe-fet7yIUJiO5ZNc4/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbyIYOw2olDsEARGQ_QOh3QVyuxxDKTZdbk1PDDdqULSiqUqhOOKzCPS5HqTE-5opE5p/exec", {
     method: "POST",
     body: JSON.stringify(formData),
     headers: { "Content-Type": "application/json" }
