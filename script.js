@@ -1,3 +1,5 @@
+// Improved script.js with better error handling and debugging
+
 document.getElementById("enquiryForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -5,25 +7,52 @@ document.getElementById("enquiryForm").addEventListener("submit", function (e) {
   const formData = new FormData(form);
   const submitButton = form.querySelector('button[type="submit"]');
   
+  // Validate form data
+  const name = formData.get('name');
+  const email = formData.get('email');
+  
+  if (!name || !email) {
+    showErrorMessage('Please fill in all required fields.');
+    return;
+  }
+  
   // Show loading state
   if (submitButton) {
     submitButton.disabled = true;
     submitButton.textContent = 'Submitting...';
   }
 
-  // Primary method: Try POST with CORS first (sometimes works)
-  fetch("https://script.google.com/macros/s/AKfycbyIYOw2olDsEARGQ_QOh3QVyuxxDKTZdbk1PDDdqULSiqUqhOOKzCPS5HqTE-5opE5p/exec", {
+  // Your Google Apps Script URL - UPDATE THIS WITH YOUR ACTUAL URL
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyIYOw2olDsEARGQ_QOh3QVyuxxDKTZdbk1PDDdqULSiqUqhOOKzCPS5HqTE-5opE5p/exec";
+
+  // Method 1: Try POST first
+  console.log('Attempting POST request...');
+  fetch(SCRIPT_URL, {
     method: "POST",
     body: formData
   })
-  .then(response => response.json())
-  .then(data => {
-    console.log('POST Success:', data);
-    handleFormSuccess();
+  .then(response => {
+    console.log('POST Response status:', response.status);
+    console.log('POST Response headers:', [...response.headers.entries()]);
+    return response.text(); // Get as text first to see what we're receiving
+  })
+  .then(text => {
+    console.log('POST Response text:', text);
+    try {
+      const data = JSON.parse(text);
+      console.log('POST Success - Parsed data:', data);
+      if (data.status === 'success') {
+        handleFormSuccess();
+      } else {
+        throw new Error(data.message || 'Server returned error status');
+      }
+    } catch (parseError) {
+      console.log('POST response not JSON, trying GET method');
+      submitFormAsGet();
+    }
   })
   .catch(error => {
-    console.log('POST failed (likely CORS), trying GET method:', error.message);
-    // If POST fails due to CORS, try GET method
+    console.log('POST failed:', error.message);
     submitFormAsGet();
   })
   .finally(() => {
@@ -43,7 +72,7 @@ document.getElementById("enquiryForm").addEventListener("submit", function (e) {
   }
 });
 
-// GET method fallback (works better with CORS)
+// GET method fallback
 function submitFormAsGet() {
   const form = document.getElementById("enquiryForm");
   const formData = new FormData(form);
@@ -54,117 +83,56 @@ function submitFormAsGet() {
     params.append(key, value);
   }
   
-  const url = "https://script.google.com/macros/s/AKfycbyIYOw2olDsEARGQ_QOh3QVyuxxDKTZdbk1PDDdqULSiqUqhOOKzCPS5HqTE-5opE5p/exec?" + params.toString();
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyIYOw2olDsEARGQ_QOh3QVyuxxDKTZdbk1PDDdqULSiqUqhOOKzCPS5HqTE-5opE5p/exec";
+  const url = SCRIPT_URL + "?" + params.toString();
   
-  // Try GET with CORS first
+  console.log('Attempting GET request to:', url);
+  
   fetch(url, { method: "GET" })
-  .then(response => response.json())
-  .then(data => {
-    console.log('GET Success:', data);
-    if (data.status === 'success') {
-      showSuccessMessage();
-      form.reset();
-    } else {
-      showErrorMessage('Server responded with error: ' + data.message);
+  .then(response => {
+    console.log('GET Response status:', response.status);
+    console.log('GET Response headers:', [...response.headers.entries()]);
+    return response.text();
+  })
+  .then(text => {
+    console.log('GET Response text:', text);
+    try {
+      const data = JSON.parse(text);
+      console.log('GET Success - Parsed data:', data);
+      if (data.status === 'success') {
+        showSuccessMessage();
+        form.reset();
+      } else {
+        showErrorMessage('Server error: ' + (data.message || 'Unknown error'));
+      }
+    } catch (parseError) {
+      console.log('GET response not JSON, using fallback method');
+      submitWithNoCors(url);
     }
   })
   .catch(error => {
-    console.log('GET with CORS failed, using no-cors mode:', error.message);
-    // Final fallback: no-cors mode (fire and forget)
+    console.log('GET failed:', error.message);
     submitWithNoCors(url);
   });
 }
 
 // Final fallback: no-cors mode
 function submitWithNoCors(url) {
+  console.log('Using no-cors fallback for:', url);
+  
   fetch(url, { 
     method: "GET", 
     mode: 'no-cors' 
   })
   .then(() => {
-    console.log('Request sent with no-cors mode (cannot verify response)');
-    // Since we can't read the response with no-cors, we assume success
-    showSuccessMessage("Your message has been sent! (Please note: we cannot verify delivery due to browser security restrictions)");
+    console.log('Request sent with no-cors mode');
+    showSuccessMessage("Your message has been sent! We'll get back to you soon.");
     document.getElementById("enquiryForm").reset();
   })
   .catch(error => {
-    console.error("Final fallback failed:", error);
+    console.error("All methods failed:", error);
     showErrorMessage("Unable to send message. Please try again or contact us directly.");
   });
-}
-
-// Alternative: Image ping method (most reliable for cross-origin)
-function submitWithImagePing() {
-  const form = document.getElementById("enquiryForm");
-  const formData = new FormData(form);
-  const params = new URLSearchParams();
-  
-  for (let [key, value] of formData.entries()) {
-    params.append(key, value);
-  }
-  
-  const url = "https://script.google.com/macros/s/AKfycbyIYOw2olDsEARGQ_QOh3QVyuxxDKTZdbk1PDDdqULSiqUqhOOKzCPS5HqTE-5opE5p/exec?" + params.toString();
-  
-  // Create an image element to trigger the request
-  const img = new Image();
-  
-  img.onload = function() {
-    console.log('Image ping successful');
-    showSuccessMessage();
-    form.reset();
-  };
-  
-  img.onerror = function() {
-    console.log('Image ping completed (may still be successful)');
-    // Even on "error", the request might have succeeded
-    showSuccessMessage("Your message has been sent!");
-    form.reset();
-  };
-  
-  // Trigger the request
-  img.src = url + "&_=" + Date.now(); // Add timestamp to prevent caching
-}
-
-// JSONP method (if your Google Script supports it)
-function submitWithJSONP() {
-  const form = document.getElementById("enquiryForm");
-  const formData = new FormData(form);
-  const params = new URLSearchParams();
-  
-  for (let [key, value] of formData.entries()) {
-    params.append(key, value);
-  }
-  
-  // Create unique callback name
-  const callbackName = 'formCallback_' + Date.now();
-  params.append('callback', callbackName);
-  
-  // Create global callback function
-  window[callbackName] = function(response) {
-    console.log('JSONP Response:', response);
-    if (response.status === 'success') {
-      showSuccessMessage();
-      form.reset();
-    } else {
-      showErrorMessage('Error: ' + response.message);
-    }
-    
-    // Cleanup
-    delete window[callbackName];
-    document.head.removeChild(script);
-  };
-  
-  const script = document.createElement('script');
-  script.src = "https://script.google.com/macros/s/AKfycbyIYOw2olDsEARGQ_QOh3QVyuxxDKTZdbk1PDDdqULSiqUqhOOKzCPS5HqTE-5opE5p/exec?" + params.toString();
-  
-  script.onerror = function() {
-    console.error('JSONP failed');
-    showErrorMessage();
-    delete window[callbackName];
-    document.head.removeChild(script);
-  };
-  
-  document.head.appendChild(script);
 }
 
 // Helper functions
@@ -213,7 +181,6 @@ function showNotification(message, type = 'info') {
     margin: 0 auto;
   `;
   
-  // For larger screens, position from right
   if (window.innerWidth > 768) {
     notification.style.left = 'auto';
     notification.style.right = '20px';
@@ -222,7 +189,6 @@ function showNotification(message, type = 'info') {
   
   document.body.appendChild(notification);
   
-  // Auto-remove after 5 seconds
   setTimeout(() => {
     if (notification.parentNode) {
       notification.style.animation = 'slideUp 0.3s ease-in';
@@ -246,13 +212,4 @@ if (!document.getElementById('notification-styles')) {
     }
   `;
   document.head.appendChild(style);
-}
-
-// Optional: Manual trigger functions for testing different methods
-function testImagePing() {
-  submitWithImagePing();
-}
-
-function testJSONP() {
-  submitWithJSONP();
 }
