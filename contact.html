@@ -26,50 +26,25 @@
   
   <main class="container my-5">
     <div class="row justify-content-center">
-      <div class="col-md-8 col-lg-6">
+      <div class="col-md-10">
         <div class="card shadow">
           <div class="card-body p-4">
             <h2 class="card-title text-center mb-4">Get In Touch</h2>
-            <form id="enquiryForm">
-              <div class="mb-3">
-                <label for="name" class="form-label">Your Name <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
-              </div>
-              
-              <div class="mb-3">
-                <label for="email" class="form-label">Your Email <span class="text-danger">*</span></label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
-              </div>
-              
-              <div class="mb-3">
-                <label for="phone" class="form-label">Your Phone</label>
-                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
-              </div>
-              
-              <div class="mb-3">
-                <label for="message" class="form-label">Your Message</label>
-                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
-              </div>
-              
-              <div class="d-grid">
-                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-              </div>
-            </form>
+            
+            <!-- Google Form Embed -->
+            <div style="height: 800px; overflow-y: hidden;">
+              <iframe 
+                src="https://docs.google.com/forms/d/157dCF0oJ-7Fopbp1IXwyv41H0g0jcyeISt3y7w_cMYY/edit" 
+                width="100%" 
+                height="800" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">
+                Loading…
+              </iframe>
+            </div>
+
           </div>
-        </div>
-        
-        <!-- Debug Panel (Hidden by default) -->
-        <div class="card mt-3" id="debugPanel" style="display: none;">
-          <div class="card-header">
-            <h5 class="mb-0">Debug Information</h5>
-          </div>
-          <div class="card-body">
-            <pre id="debugInfo" class="small text-muted" style="max-height: 200px; overflow-y: auto;"></pre>
-          </div>
-        </div>
-        
-        <div class="text-center mt-3">
-          <button class="btn btn-outline-secondary btn-sm" onclick="toggleDebug()">Toggle Debug Info</button>
         </div>
       </div>
     </div>
@@ -82,6 +57,5 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
