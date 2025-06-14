@@ -1,29 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Coaching Classes - Home</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Coaching Classes - Excellence in School & Commerce Education</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --mango-yellow: #FFD700;
+            --violet: #8A2BE2;
+        }
+        .bg-mango { background-color: var(--mango-yellow) !important; }
+        .bg-violet { background-color: var(--violet) !important; }
+        .text-violet { color: var(--violet) !important; }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to XYZ Coaching Classes</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-violet navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i>ABC Coaching Classes
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  </header>
-  <main>
-    <h2>Empowering Students to Succeed</h2>
-    <p>Join our expert-led coaching programs for school, college, and competitive exams.</p>
-    
-    <!-- Added image here -->
-    <img src="https://drive.google.com/uc?export=view&id=1yNOVNmX4uier91RLZaIDvo69_otkOXJu" 
-         alt="Coaching Classes Image" 
-         style="max-width: 100%; height: auto;">
-  </main>
-  <footer>&copy; 2025 XYZ Coaching Classes</footer>
+
+    <!-- Hero Section -->
+    <section class="bg-mango py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-violet mb-4">ABC Coaching Classes</h1>
+                    <p class="lead text-dark mb-4">Specialized in School Education (1st-10th) & Commerce (11th-12th)</p>
+                    <p class="text-dark mb-4">Building strong academic foundations for SSC, CBSE students and future commerce professionals with personalized attention and expert guidance.</p>
+                    <div class="d-flex gap-3">
+                        <a href="services.html" class="btn bg-violet text-white btn-lg">Our Courses</a>
+                        <a href="contact.html" class="btn btn-outline-dark btn-lg">Admission Inquiry</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <!-- Hero Image Position -->
+                    <img src="" alt="Students learning in classroom" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold text-violet mb-3">Why Choose ABC Coaching?</h2>
+                    <p class="lead text-muted">Quality education tailored for school and commerce students</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-mango rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-book-open fa-2x text-violet"></i>
+                            </div>
+                            <h5 class="card-title text-violet">Comprehensive Curriculum</h5>
+                            <p class="card-text">Covering all subjects for 1st-10th (SSC/CBSE) and specialized Commerce subjects for 11th-12th including Accounts, Economics, and Business Studies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-mango rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-chalkboard-user fa-2x text-violet"></i>
+                            </div>
+                            <h5 class="card-title text-violet">Experienced Faculty</h5>
+                            <p class="card-text">Dedicated teachers with years of experience in school education and commerce stream, focusing on conceptual clarity and practical applications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-mango rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-award fa-2x text-violet"></i>
+                            </div>
+                            <h5 class="card-title text-violet">Board Exam Excellence</h5>
+                            <p class="card-text">Proven track record of helping students achieve 90+% in board exams and distinction in commerce subjects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-violet">Our Achievers</h2>
+                    <p class="lead text-muted">Students who excelled with our guidance</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <!-- Student Image Position -->
+                                <img src="" alt="Student success photo" class="rounded-circle me-3" width="60" height="60">
+                                <div>
+                                    <h6 class="mb-0 text-violet">Neha Deshmukh</h6>
+                                    <small class="text-muted">SSC 2024 - 95.6%</small>
+                                </div>
+                            </div>
+                            <p class="card-text">"ABC Coaching helped me build strong fundamentals in all subjects. The regular tests and personalized attention made my SSC preparation stress-free and effective."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <!-- Student Image Position -->
+                                <img src="" alt="Student success photo" class="rounded-circle me-3" width="60" height="60">
+                                <div>
+                                    <h6 class="mb-0 text-violet">Rohan Mehta</h6>
+                                    <small class="text-muted">HSC Commerce 2024 - 92%</small>
+                                </div>
+                            </div>
+                            <p class="card-text">"The Accounts and Economics faculty at ABC Coaching are exceptional. They made complex concepts easy to understand, helping me score 98 in Accounts!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <!-- Courses Offered -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-5 fw-bold text-violet mb-3">Our Comprehensive Programs</h2>
+                    <p class="lead text-muted">Tailored courses designed for academic excellence</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100 hover-scale">
+                        <div class="card-header bg-violet text-white py-3">
+                            <h4 class="mb-0 text-center"><i class="fas fa-school me-2"></i>School Education (1st-10th)</h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <ul class="list-unstyled">
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-violet mt-1 me-2"></i>
+                                    <span>Complete coverage of SSC & CBSE syllabus</span>
+                                </li>
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-violet mt-1 me-2"></i>
+                                    <span>Mathematics, Science, English, Social Studies</span>
+                                </li>
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-violet mt-1 me-2"></i>
+                                    <span>Special board exam preparation batches</span>
+                                </li>
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-violet mt-1 me-2"></i>
+                                    <span>Regular parent-teacher meetings</span>
+                                </li>
+                                <li class="d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-violet mt-1 me-2"></i>
+                                    <span>Weekly tests and progress reports</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 text-center py-3">
+                            <a href="#" class="btn btn-sm bg-violet text-white">More Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100 hover-scale">
+                        <div class="card-header bg-violet text-white py-3">
+                            <h4 class="mb-0 text-center"><i class="fas fa-calculator me-2"></i>Commerce Stream (11th-12th)</h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <ul class="list-unstyled">
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-violet mt-1 me-2"></i>
+                                    <span>Accounts, Economics, Business Studies, Mathematics</span>
+                                </li>
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-violet mt-1 me-2"></i>
+                                    <span>Practical approach to commerce subjects</span>
+                                </li>
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-violet mt-1 me-2"></i>
+                                    <span>CA Foundation preparation support</span>
+                                </li>
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-violet mt-1 me-2"></i>
+                                    <span>Project work and practical guidance</span>
+                                </li>
+                                <li class="d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-violet mt-1 me-2"></i>
+                                    <span>Career counseling for commerce students</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 text-center py-3">
+                            <a href="#" class="btn btn-sm bg-violet text-white">More Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-5 fw-bold text-violet mb-3">What Parents & Students Say</h2>
+                    <p class="lead text-muted">Trusted by hundreds of families in our community</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text mb-4">"My daughter's performance improved dramatically after joining ABC Classes. The teachers give personal attention to each student."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://via.placeholder.com/50" alt="Parent" class="rounded-circle me-3" width="50" height="50">
+                                <div>
+                                    <h6 class="mb-0 text-violet">Mrs. Sharma</h6>
+                                    <small class="text-muted">Parent of 8th Grade Student</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text mb-4">"The commerce faculty explains complex accounting concepts so clearly. I scored 95 in Accounts in my 12th boards!"</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://via.placeholder.com/50" alt="Student" class="rounded-circle me-3" width="50" height="50">
+                                <div>
+                                    <h6 class="mb-0 text-violet">Rahul Verma</h6>
+                                    <small class="text-muted">12th Commerce (2024)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="card-text mb-4">"The small batch size makes all the difference. My son gets individual attention that he wasn't getting in school."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://via.placeholder.com/50" alt="Parent" class="rounded-circle me-3" width="50" height="50">
+                                <div>
+                                    <h6 class="mb-0 text-violet">Mr. Patel</h6>
+                                    <small class="text-muted">Parent of 5th Grade Student</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-violet text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h3 class="fw-bold mb-3">Limited Seats Available for 2024-25 Batch</h3>
+                    <p class="mb-0">Secure your child's spot today and give them the academic advantage they deserve.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="contact.html" class="btn bg-mango text-violet fw-bold px-4 py-2">Enroll Now <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-warning mb-4"><i class="fas fa-graduation-cap me-2"></i>ABC Coaching Classes</h5>
+                    <p>Providing quality education since 2010 with a focus on conceptual understanding and academic excellence.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="text-warning mb-4">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">Courses</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h6 class="text-warning mb-4">Courses</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Primary School (1st-5th)</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Middle School (6th-8th)</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">High School (9th-10th)</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">11th Commerce</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">12th Commerce</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h6 class="text-warning mb-4">Contact Us</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-map-marker-alt text-warning mt-1 me-2"></i>
+                            <span>123 Education Street, Learning City, 400001</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-phone-alt text-warning mt-1 me-2"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <i class="fas fa-envelope text-warning mt-1 me-2"></i>
+                            <span>info@abccoaching.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2024 ABC Coaching Classes. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> for education</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
