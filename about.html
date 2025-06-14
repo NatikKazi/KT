@@ -1,23 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>About Us</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - XYZ Coaching Classes</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --mango-yellow: #FFD700;
+            --violet: #8A2BE2;
+        }
+        .bg-mango { background-color: var(--mango-yellow) !important; }
+        .bg-violet { background-color: var(--violet) !important; }
+        .text-violet { color: var(--violet) !important; }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>About XYZ Coaching Classes</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <p>We are a team of passionate educators offering quality coaching for over 10 years, helping thousands of students succeed.</p>
-  </main>
-  <footer>&copy; 2025 XYZ Coaching Classes</footer>
+     <!-- Header will be inserted here -->
+  <div data-include="header.html"></div>
+    <!-- Page Header -->
+    <section class="bg-mango py-5">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold text-violet mb-3">About XYZ Coaching Classes</h1>
+            <p class="lead text-dark">10+ Years of Excellence in Education</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold text-violet mb-4">Our Story</h2>
+                    <p class="lead text-muted mb-4">Founded in 2015 with a vision to provide quality education to every student</p>
+                    <p class="mb-4">XYZ Coaching Classes began as a small initiative by a group of passionate educators who believed that every student deserves access to quality education. What started with just 15 students has now grown into one of the most trusted coaching institutes in the region, having successfully guided over 10,000 students towards their academic goals.</p>
+                    <p class="mb-4">Our commitment to excellence, personalized attention, and innovative teaching methodologies has helped us maintain a consistently high success rate. We take pride in being not just teachers, but mentors who guide students through their academic journey and beyond.</p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-mango rounded-circle d-inline-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-users text-violet"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-violet mb-0">10,000+</h5>
+                                    <small class="text-muted">Students Trained</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-mango rounded-circle d-inline-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-trophy text-violet"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-violet mb-0">95%</h5>
+                                    <small class="text-muted">Success Rate</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- About Image Position -->
+                    <img src="" alt="Coaching institute building exterior" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-mango rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-bullseye fa-2x text-violet"></i>
+                            </div>
+                            <h3 class="text-violet mb-3">Our Mission</h3>
+                            <p class="text-muted">To provide exceptional educational guidance and create an environment where every student can discover their potential, develop their skills, and achieve their academic aspirations through innovative teaching methods and personalized attention.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-mango rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-eye fa-2x text-violet"></i>
+                            </div>
+                            <h3 class="text-violet mb-3">Our Vision</h3>
+                            <p class="text-muted">To be the leading educational institution that transforms lives through quality education, fostering critical thinking, creativity, and character development while preparing students for future challenges and opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-violet">Meet Our Expert Faculty</h2>
+                <p class="lead text-muted">Experienced educators dedicated to your success</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <!-- Faculty Image Position -->
+                            <img src="" alt="Dr. Rajesh Kumar - Physics Professor" class="rounded-circle mb-3" width="120" height="120">
+                            <h5 class="text-violet">Dr. Rajesh Kumar</h5>
+                            <p class="text-muted mb-2">Physics (JEE/NEET)</p>
+                            <small class="text-muted">15+ Years Experience<br>IIT Delhi Alumni</small>
+                            <div class="mt-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <!-- Faculty Image Position -->
+                            <img src="" alt="Prof. Sunita Sharma - Chemistry Professor" class="rounded-circle mb-3" width="120" height="120">
+                            <h5 class="text-violet">Prof. Sunita Sharma</h5>
+                            <p class="text-muted mb-2">Chemistry (JEE/NEET)</p>
+                            <small class="text-muted">12+ Years Experience<br>Gold Medalist in M.Sc</small>
+                            <div class="mt-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <!-- Faculty Image Position -->
+                            <img src="" alt="Dr. Amit Patel - Mathematics Professor" class="rounded-circle mb-3" width="120" height="120">
+                            <h5 class="text-violet">Dr. Amit Patel</h5>
+                            <p class="text-muted mb-2">Mathematics (JEE/School)</p>
+                            <small class="text-muted">18+ Years Experience<br>IIT Bombay Alumni</small>
+                            <div class="mt-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <!-- Faculty Image Position -->
+                            <img src="" alt="Dr. Priya Singh - Biology Professor" class="rounded-circle mb-3" width="120" height="120">
+                            <h5 class="text-violet">Dr. Priya Singh</h5>
+                            <p class="text-muted mb-2">Biology (NEET)</p>
+                            <small class="text-muted">10+ Years Experience<br>AIIMS Delhi Alumni</small>
+                            <div class="mt-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="bg-violet py-5">
+        <div class="container">
+            <div class="text-center text-white mb-5">
+                <h2 class="display-5 fw-bold">Our Achievements</h2>
+                <p class="lead">Milestones that make us proud</p>
+            </div>
+            <div class="row g-4 text-center text-white">
+                <div class="col-md-3">
+                    <div class="bg-mango rounded-3 p-4 text-violet h-100">
+                        <i class="fas fa-award fa-3x mb-3"></i>
+                        <h3 class="fw-bold">500+</h3>
+                        <p class="mb-0">NEET Qualifiers</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-mango rounded-3 p-4 text-violet h-100">
+                        <i class="fas fa-graduation-cap fa-3x mb-3"></i>
+                        <h3 class="fw-bold">300+</h3>
+                        <p class="mb-0">JEE Qualifiers</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-mango rounded-3 p-4 text-violet h-100">
+                        <i class="fas fa-medal fa-3x mb-3"></i>
+                        <h3 class="fw-bold">50+</h3>
+                        <p class="mb-0">Top 100 Ranks</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-mango rounded-3 p-4 text-violet h-100">
+                        <i class="fas fa-star fa-3x mb-3"></i>
+                        <h3 class="fw-bold">4.9/5</h3>
+                        <p class="mb-0">Student Rating</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-violet">Our Facilities</h2>
+                <p class="lead text-muted">Modern infrastructure for effective learning</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <!-- Facility Image Position -->
+                            <img src="" alt="Modern classroom with smart boards" class="img-fluid rounded mb-3">
+                            <h5 class="text-violet">Smart Classrooms</h5>
+                            <p class="text-muted">Air-conditioned classrooms equipped with smart boards and modern teaching aids for interactive learning.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <!-- Facility Image Position -->
+                            <img src="" alt="Well-equipped library with study materials" class="img-fluid rounded mb-3">
+                            <h5 class="text-violet">Library & Study Hall</h5>
+                            <p class="text-muted">Extensive library with reference books, previous year papers, and quiet study areas for focused learning.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <!-- Facility Image Position -->
+                            <img src="" alt="Science laboratory for practical sessions" class="img-fluid rounded mb-3">
+                            <h5 class="text-violet">Science Labs</h5>
+                            <p class="text-muted">Fully equipped physics, chemistry, and biology labs for hands-on practical experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <!-- Facility Image Position -->
+                            <img src="" alt="Computer lab with latest software" class="img-fluid rounded mb-3">
+                            <h5 class="text-violet">Computer Lab</h5>
+                            <p class="text-muted">Modern computer lab with high-speed internet for online tests and digital learning resources.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <!-- Facility Image Position -->
+                            <img src="" alt="Student counseling and guidance room" class="img-fluid rounded mb-3">
+                            <h5 class="text-violet">Counseling Center</h5>
+                            <p class="text-muted">Dedicated counseling center for career guidance, stress management, and academic planning.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <!-- Facility Image Position -->
+                            <img src="" alt="Student cafeteria and recreation area" class="img-fluid rounded mb-3">
+                            <h5 class="text-violet">Cafeteria</h5>
+                            <p class="text-muted">Healthy and nutritious food options with comfortable seating area for students to relax and socialize.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-violet">What Our Students Say</h2>
+                <p class="lead text-muted">Success stories from our proud students</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <!-- Student Image Position -->
+                                <img src="" alt="Ananya Gupta student testimonial" class="rounded-circle me-3" width="60" height="60">
+                                <div>
+                                    <h6 class="mb-0 text-violet">Ananya Gupta</h6>
+                                    <small class="text-muted">NEET 2024 - AIR 45</small>
+                                </div>
+                            </div>
+                            <p class="card-text">"The faculty at XYZ Coaching is exceptional. Their personalized approach and constant motivation helped me achieve my dream of becoming a doctor. Thank you for believing in me!"</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <!-- Student Image Position -->
+                                <img src="" alt="Vikram Singh student testimonial" class="rounded-circle me-3" width="60" height="60">
+                                <div>
+                                    <h6 class="mb-0 text-violet">Vikram Singh</h6>
+                                    <small class="text-muted">JEE Advanced 2024 - AIR 156</small>
+                                </div>
+                            </div>
+                            <p class="card-text">"The problem-solving techniques taught here are amazing. The regular mock tests and detailed analysis helped me improve consistently. Now I'm at IIT Kanpur!"</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <!-- Student Image Position -->
+                                <img src="" alt="Sneha Reddy student testimonial" class="rounded-circle me-3" width="60" height="60">
+                                <div>
+                                    <h6 class="mb-0 text-violet">Sneha Reddy</h6>
+                                    <small class="text-muted">Class 12 CBSE - 96.2%</small>
+                                </div>
+                            </div>
+                            <p class="card-text">"XYZ Coaching made Class 12 so much easier. The teachers explain concepts clearly and the study material is excellent. Highly recommend to all students!"</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer will be inserted here -->
+  <div data-include="footer.html"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
