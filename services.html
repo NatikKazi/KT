@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - XYZ Coaching Classes</title>
+    <title>Our Services - ABC Coaching Classes</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
- <style>
+    <style>
         :root {
             --mango-yellow: #FFD700;
             --violet: #8A2BE2;
@@ -14,10 +14,43 @@
         .bg-mango { background-color: var(--mango-yellow) !important; }
         .bg-violet { background-color: var(--violet) !important; }
         .text-violet { color: var(--violet) !important; }
+        .hero-section {
+            background: linear-gradient(rgba(138, 43, 226, 0.8), rgba(138, 43, 226, 0.9)), 
+                        url('images/classroom-group.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .img-cover {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .service-card {
+            transition: transform 0.3s;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-icon {
+            width: 50px;
+            height: 50px;
+        }
+        .price-tag {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .discount-badge {
+            font-size: 0.8rem;
+            text-decoration: line-through;
+            color: #6c757d;
+        }
     </style>
 </head>
 <body>
-      <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-violet navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
@@ -29,10 +62,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html">Courses</a>
+                        <a class="nav-link active" href="services.html">Courses</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
@@ -44,42 +77,23 @@
             </div>
         </div>
     </nav>
+
     <!-- Hero Section -->
     <section class="hero-section py-5">
         <div class="container py-4">
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h1 class="display-4 fw-bold mb-3">Our Educational Programs</h1>
-                    <p class="lead mb-4">Comprehensive coaching designed to unlock your academic potential</p>
+                    <p class="lead mb-4">English-medium coaching for SSC & CBSE students with personalized attention</p>
                     <div class="d-flex flex-wrap gap-3">
                         <a href="#courses" class="btn btn-light btn-lg px-4 fw-bold">Explore Courses</a>
                         <a href="contact.html" class="btn btn-outline-light btn-lg px-4">Contact Us</a>
                     </div>
                 </div>
                 <div class="col-lg-6 d-none d-lg-block">
-                    <img src="https://via.placeholder.com/600x400" alt="Students learning" class="img-fluid rounded-3 shadow">
+                    <img src="images/students-discussing.jpg" alt="Students learning together" class="img-fluid rounded-3 shadow">
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Course Categories -->
-    <section class="py-4 bg-light">
-        <div class="container">
-            <ul class="nav nav-pills justify-content-center flex-nowrap overflow-auto pb-2">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#school">School</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#competitive">Competitive</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#foundation">Foundation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#special">Special</a>
-                </li>
-            </ul>
         </div>
     </section>
 
@@ -87,133 +101,69 @@
     <section id="courses" class="py-5">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="badge bg-mango text-violet mb-3">Our Programs</span>
-                <h2 class="display-5 fw-bold">Choose Your Learning Path</h2>
-                <p class="lead text-muted">Tailored courses for every academic need</p>
+                <h2 class="display-5 fw-bold text-violet">Choose Your Learning Path</h2>
+                <p class="lead text-muted">Structured programs for academic excellence</p>
             </div>
             
             <div class="row g-4">
-                <!-- School Coaching -->
-                <div class="col-lg-6">
-                    <div class="card service-card h-100 shadow-sm">
-                        <div class="row g-0 h-100">
-                            <div class="col-md-5">
-                                <img src="https://via.placeholder.com/300x300" alt="School students" class="img-cover">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body p-4 d-flex flex-column h-100">
-                                    <div class="d-flex align-items-center mb-3">
-                                        <div class="service-icon bg-mango rounded-circle me-3">
-                                            <i class="fas fa-school text-violet fs-4"></i>
-                                        </div>
-                                        <h4 class="card-title text-violet mb-0">School Coaching (8-12)</h4>
-                                    </div>
-                                    <p class="card-text flex-grow-1">Complete academic support for CBSE, ICSE, and State boards with regular assessments and doubt clearing sessions.</p>
-                                    <ul class="list-unstyled mb-4">
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Mathematics & Science</li>
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>English & Hindi</li>
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Social Studies</li>
-                                        <li><i class="fas fa-check-circle text-success me-2"></i>Regular Tests & Projects</li>
-                                    </ul>
-                                    <div class="d-flex justify-content-between align-items-center mt-auto">
-                                        <span class="price-tag text-violet">₹8,000/month</span>
-                                        <a href="contact.html" class="btn bg-violet text-white btn-enroll">Enroll Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Example for Primary School (1st-8th) -->
+<div class="d-flex justify-content-between align-items-center mt-auto">
+    <div>
+        <span class="badge bg-success mb-2">15% OFF</span>
+        <div class="price-tag text-violet">Annual Payment Discount</div>
+        <small class="text-muted">Limited time offer</small>
+    </div>
+    <a href="contact.html" class="btn bg-violet text-white">Enquire Now</a>
+</div>
 
-                <!-- NEET Preparation -->
-                <div class="col-lg-6">
-                    <div class="card service-card h-100 shadow-sm">
-                        <div class="row g-0 h-100">
-                            <div class="col-md-5">
-                                <img src="https://via.placeholder.com/300x300" alt="Medical students" class="img-cover">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body p-4 d-flex flex-column h-100">
-                                    <div class="d-flex align-items-center mb-3">
-                                        <div class="service-icon bg-mango rounded-circle me-3">
-                                            <i class="fas fa-heartbeat text-violet fs-4"></i>
-                                        </div>
-                                        <h4 class="card-title text-violet mb-0">NEET Preparation</h4>
-                                    </div>
-                                    <p class="card-text flex-grow-1">Intensive medical entrance exam preparation with expert biology, chemistry, and physics faculty.</p>
-                                    <ul class="list-unstyled mb-4">
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Physics, Chemistry, Biology</li>
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Daily Practice Tests</li>
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Previous Years Analysis</li>
-                                        <li><i class="fas fa-check-circle text-success me-2"></i>Mock Test Series</li>
-                                    </ul>
-                                    <div class="d-flex justify-content-between align-items-center mt-auto">
-                                        <span class="price-tag text-violet">₹15,000/month</span>
-                                        <a href="contact.html" class="btn bg-violet text-white btn-enroll">Enroll Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- Example for 9th-10th SSC -->
+<div class="d-flex justify-content-between align-items-center mt-auto">
+    <div>
+        <span class="badge bg-danger mb-2">EARLY BIRD</span>
+        <div class="price-tag text-violet">Special Scholarship Available</div>
+        <small class="text-muted">For admissions before [date]</small>
+    </div>
+    <a href="contact.html" class="btn bg-violet text-white">Apply Now</a>
+</div>
 
-                <!-- JEE Preparation -->
-                <div class="col-lg-6">
-                    <div class="card service-card h-100 shadow-sm">
-                        <div class="row g-0 h-100">
-                            <div class="col-md-5">
-                                <img src="https://via.placeholder.com/300x300" alt="Engineering students" class="img-cover">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body p-4 d-flex flex-column h-100">
-                                    <div class="d-flex align-items-center mb-3">
-                                        <div class="service-icon bg-mango rounded-circle me-3">
-                                            <i class="fas fa-cogs text-violet fs-4"></i>
-                                        </div>
-                                        <h4 class="card-title text-violet mb-0">JEE Main & Advanced</h4>
-                                    </div>
-                                    <p class="card-text flex-grow-1">Comprehensive engineering entrance exam preparation with focus on problem-solving techniques.</p>
-                                    <ul class="list-unstyled mb-4">
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Mathematics & Physics</li>
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Chemistry (Organic & Inorganic)</li>
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Advanced Problem Solving</li>
-                                        <li><i class="fas fa-check-circle text-success me-2"></i>IIT Level Preparation</li>
-                                    </ul>
-                                    <div class="d-flex justify-content-between align-items-center mt-auto">
-                                        <span class="price-tag text-violet">₹12,000/month</span>
-                                        <a href="contact.html" class="btn bg-violet text-white btn-enroll">Enroll Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- Example for Commerce -->
+<div class="d-flex justify-content-between align-items-center mt-auto">
+    <div>
+        <span class="badge bg-warning text-dark mb-2">GROUP DISCOUNT</span>
+        <div class="price-tag text-violet">Save up to 20%</div>
+        <small class="text-muted">When joining with friends</small>
+    </div>
+    <a href="contact.html" class="btn bg-violet text-white">Know More</a>
+</div>
 
-                <!-- MPSC/UPSC Foundation -->
+                <!-- Science & Math Special -->
                 <div class="col-lg-6">
                     <div class="card service-card h-100 shadow-sm">
                         <div class="row g-0 h-100">
                             <div class="col-md-5">
-                                <img src="https://via.placeholder.com/300x300" alt="Civil services students" class="img-cover">
+                                <img src="images/science-lab.jpg" alt="Science students" class="img-cover">
                             </div>
                             <div class="col-md-7">
                                 <div class="card-body p-4 d-flex flex-column h-100">
                                     <div class="d-flex align-items-center mb-3">
-                                        <div class="service-icon bg-mango rounded-circle me-3">
-                                            <i class="fas fa-landmark text-violet fs-4"></i>
+                                        <div class="service-icon bg-mango rounded-circle me-3 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-flask text-violet fs-4"></i>
                                         </div>
-                                        <h4 class="card-title text-violet mb-0">MPSC/UPSC Foundation</h4>
+                                        <h4 class="card-title text-violet mb-0">Science & Math Special</h4>
                                     </div>
-                                    <p class="card-text flex-grow-1">Foundation courses for civil services preparation with current affairs and general studies focus.</p>
+                                    <p class="card-text flex-grow-1">Advanced program for students excelling in scientific subjects.</p>
                                     <ul class="list-unstyled mb-4">
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>General Studies (GS 1-4)</li>
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Current Affairs</li>
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Optional Subjects</li>
-                                        <li><i class="fas fa-check-circle text-success me-2"></i>Answer Writing Practice</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Advanced Mathematics</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Practical Science</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Olympiad preparation</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i>Project guidance</li>
                                     </ul>
                                     <div class="d-flex justify-content-between align-items-center mt-auto">
-                                        <span class="price-tag text-violet">₹10,000/month</span>
-                                        <a href="contact.html" class="btn bg-violet text-white btn-enroll">Enroll Now</a>
+                                        <div>
+                                            <span class="price-tag text-violet">Special package</span><br>
+                                            <small class="discount-badge">For school toppers</small>
+                                        </div>
+                                        <a href="contact.html" class="btn bg-violet text-white">Enquire Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -229,36 +179,39 @@
         <div class="container">
             <div class="text-center mb-5">
                 <span class="badge bg-violet text-white mb-3">Special Programs</span>
-                <h2 class="display-5 fw-bold">Additional Learning Options</h2>
-                <p class="lead text-muted">Flexible programs to suit your needs</p>
+                <h2 class="display-5 fw-bold text-violet">Additional Learning Options</h2>
+                <p class="lead text-muted">Enhance your skills beyond academics</p>
             </div>
             
             <div class="row g-4">
-                <!-- Personal Doubt Sessions -->
+                <!-- Language Learning -->
                 <div class="col-md-6">
                     <div class="card service-card h-100 shadow-sm">
                         <div class="row g-0 h-100">
                             <div class="col-md-5">
-                                <img src="https://via.placeholder.com/300x300" alt="One-on-one tutoring" class="img-cover">
+                                <img src="images/language-class.jpg" alt="Language learning" class="img-cover">
                             </div>
                             <div class="col-md-7">
                                 <div class="card-body p-4 d-flex flex-column h-100">
                                     <div class="d-flex align-items-center mb-3">
-                                        <div class="service-icon bg-mango rounded-circle me-3">
-                                            <i class="fas fa-user-graduate text-violet fs-4"></i>
+                                        <div class="service-icon bg-mango rounded-circle me-3 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-language text-violet fs-4"></i>
                                         </div>
-                                        <h4 class="card-title text-violet mb-0">Personal Doubt Sessions</h4>
+                                        <h4 class="card-title text-violet mb-0">Language Classes</h4>
                                     </div>
-                                    <p class="card-text flex-grow-1">One-on-one personalized sessions for clearing specific doubts and focused learning.</p>
+                                    <p class="card-text flex-grow-1">Master communication skills in multiple languages with our expert faculty.</p>
                                     <ul class="list-unstyled mb-4">
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Individual Attention</li>
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Customized Study Plan</li>
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Flexible Timings</li>
-                                        <li><i class="fas fa-check-circle text-success me-2"></i>Progress Tracking</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Hindi (Basic to Advanced)</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Marathi (Spoken & Written)</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Urdu (Conversational)</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i>Sanskrit (School Curriculum)</li>
                                     </ul>
                                     <div class="d-flex justify-content-between align-items-center mt-auto">
-                                        <span class="price-tag text-violet">₹500/hour</span>
-                                        <a href="contact.html" class="btn bg-violet text-white btn-enroll">Book Session</a>
+                                        <div>
+                                            <span class="price-tag text-violet">Flexible batches</span><br>
+                                            <small class="discount-badge">Group discounts available</small>
+                                        </div>
+                                        <a href="contact.html" class="btn bg-violet text-white">Know More</a>
                                     </div>
                                 </div>
                             </div>
@@ -266,31 +219,34 @@
                     </div>
                 </div>
 
-                <!-- Online Classes -->
+                <!-- Weekend Workshops -->
                 <div class="col-md-6">
                     <div class="card service-card h-100 shadow-sm">
                         <div class="row g-0 h-100">
                             <div class="col-md-5">
-                                <img src="https://via.placeholder.com/300x300" alt="Online learning" class="img-cover">
+                                <img src="images/weekend-workshop.jpg" alt="Weekend workshop" class="img-cover">
                             </div>
                             <div class="col-md-7">
                                 <div class="card-body p-4 d-flex flex-column h-100">
                                     <div class="d-flex align-items-center mb-3">
-                                        <div class="service-icon bg-mango rounded-circle me-3">
-                                            <i class="fas fa-laptop text-violet fs-4"></i>
+                                        <div class="service-icon bg-mango rounded-circle me-3 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-calendar-alt text-violet fs-4"></i>
                                         </div>
-                                        <h4 class="card-title text-violet mb-0">Online Classes</h4>
+                                        <h4 class="card-title text-violet mb-0">Weekend Workshops</h4>
                                     </div>
-                                    <p class="card-text flex-grow-1">Interactive online sessions with recorded lectures, digital study materials, and virtual doubt solving.</p>
+                                    <p class="card-text flex-grow-1">Skill-building sessions conducted every Saturday for holistic development.</p>
                                     <ul class="list-unstyled mb-4">
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Live Interactive Sessions</li>
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Recorded Lectures</li>
-                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Digital Study Material</li>
-                                        <li><i class="fas fa-check-circle text-success me-2"></i>Online Test Series</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Public Speaking</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Creative Writing</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Vedic Mathematics</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i>Science Experiments</li>
                                     </ul>
                                     <div class="d-flex justify-content-between align-items-center mt-auto">
-                                        <span class="price-tag text-violet">₹6,000/month</span>
-                                        <a href="contact.html" class="btn bg-violet text-white btn-enroll">Start Learning</a>
+                                        <div>
+                                            <span class="price-tag text-violet">Pay per workshop</span><br>
+                                            <small class="discount-badge">Package deals available</small>
+                                        </div>
+                                        <a href="contact.html" class="btn bg-violet text-white">View Schedule</a>
                                     </div>
                                 </div>
                             </div>
@@ -369,7 +325,7 @@
                             </div>
                             <p class="card-text mb-4">"The personalized attention my daughter received helped her score 95% in 10th boards. The teachers are truly dedicated."</p>
                             <div class="d-flex align-items-center">
-                                <img src="https://via.placeholder.com/50" alt="Parent" class="rounded-circle me-3" width="50" height="50">
+                                <img src="images/parent1.jpg" alt="Parent" class="rounded-circle me-3" width="50" height="50">
                                 <div>
                                     <h6 class="mb-0 text-violet">Mrs. Sharma</h6>
                                     <small class="text-muted">Parent of 10th Grade Student</small>
@@ -388,12 +344,12 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <p class="card-text mb-4">"The NEET crash course was incredibly thorough. I cleared NEET in my first attempt with AIR 1247!"</p>
+                            <p class="card-text mb-4">"ABC Classes made Accounts so easy! I scored 98/100 in 12th Commerce thanks to their practical teaching methods."</p>
                             <div class="d-flex align-items-center">
-                                <img src="https://via.placeholder.com/50" alt="Student" class="rounded-circle me-3" width="50" height="50">
+                                <img src="images/student1.jpg" alt="Student" class="rounded-circle me-3" width="50" height="50">
                                 <div>
                                     <h6 class="mb-0 text-violet">Rahul Verma</h6>
-                                    <small class="text-muted">NEET 2024 Qualified</small>
+                                    <small class="text-muted">12th Commerce (98 in Accounts)</small>
                                 </div>
                             </div>
                         </div>
@@ -409,12 +365,12 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <p class="card-text mb-4">"The online classes were just as effective as in-person. The recorded lectures helped me revise anytime."</p>
+                            <p class="card-text mb-4">"The weekend Vedic Math workshops transformed how my son approaches problems. Highly recommended!"</p>
                             <div class="d-flex align-items-center">
-                                <img src="https://via.placeholder.com/50" alt="Student" class="rounded-circle me-3" width="50" height="50">
+                                <img src="images/parent2.jpg" alt="Parent" class="rounded-circle me-3" width="50" height="50">
                                 <div>
-                                    <h6 class="mb-0 text-violet">Priya Patel</h6>
-                                    <small class="text-muted">JEE Aspirant</small>
+                                    <h6 class="mb-0 text-violet">Mr. Patel</h6>
+                                    <small class="text-muted">Parent of 8th Grade Student</small>
                                 </div>
                             </div>
                         </div>
@@ -425,7 +381,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-5 bg-dark-violet text-white">
+    <section class="py-5 bg-violet text-white">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 mb-4 mb-lg-0">
@@ -439,7 +395,7 @@
         </div>
     </section>
 
-      <!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-dark text-white pt-5 pb-3">
         <div class="container">
             <div class="row g-4">
@@ -466,11 +422,11 @@
                 <div class="col-lg-3 col-md-4">
                     <h6 class="text-warning mb-4">Courses</h6>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Primary School (1st-5th)</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Middle School (6th-8th)</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">High School (9th-10th)</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">11th Commerce</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">12th Commerce</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Primary (1st-8th)</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">9th-10th SSC</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">11th-12th Commerce</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Language Classes</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Weekend Workshops</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-4">
@@ -478,7 +434,7 @@
                     <ul class="list-unstyled">
                         <li class="mb-3 d-flex align-items-start">
                             <i class="fas fa-map-marker-alt text-warning mt-1 me-2"></i>
-                            <span>123 Education Street, Learning City, 400001</span>
+                            <span>123 Education Street, Mumbai, 400001</span>
                         </li>
                         <li class="mb-3 d-flex align-items-start">
                             <i class="fas fa-phone-alt text-warning mt-1 me-2"></i>
