@@ -26,3 +26,62 @@ input, textarea {
   margin-bottom: 10px;
   padding: 8px;
 }
+        :root {
+            --mango-yellow: #FFD700;
+            --violet: #8A2BE2;
+            --dark-violet: #6a1b9a;
+        }
+        .bg-mango { background-color: var(--mango-yellow) !important; }
+        .bg-violet { background-color: var(--violet) !important; }
+        .bg-dark-violet { background-color: var(--dark-violet) !important; }
+        .text-violet { color: var(--violet) !important; }
+        
+        /* Custom Styles */
+        .service-card {
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+            border: none;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, var(--violet) 0%, var(--dark-violet) 100%);
+            color: white;
+        }
+        .price-tag {
+            background-color: rgba(138, 43, 226, 0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+        .img-cover {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+        .btn-enroll {
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .nav-pills .nav-link.active {
+            background-color: var(--violet);
+        }
+        .nav-pills .nav-link {
+            color: var(--violet);
+            font-weight: 500;
+        }
