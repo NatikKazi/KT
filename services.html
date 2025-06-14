@@ -6,72 +6,44 @@
     <title>Our Services - XYZ Coaching Classes</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
+ <style>
         :root {
             --mango-yellow: #FFD700;
             --violet: #8A2BE2;
-            --dark-violet: #6a1b9a;
         }
         .bg-mango { background-color: var(--mango-yellow) !important; }
         .bg-violet { background-color: var(--violet) !important; }
-        .bg-dark-violet { background-color: var(--dark-violet) !important; }
         .text-violet { color: var(--violet) !important; }
-        
-        /* Custom Styles */
-        .service-card {
-            transition: all 0.3s ease;
-            border-radius: 12px;
-            overflow: hidden;
-            border: none;
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .feature-icon {
-            width: 70px;
-            height: 70px;
-        }
-        .hero-section {
-            background: linear-gradient(135deg, var(--violet) 0%, var(--dark-violet) 100%);
-            color: white;
-        }
-        .price-tag {
-            background-color: rgba(138, 43, 226, 0.1);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 700;
-        }
-        .img-cover {
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-        }
-        .btn-enroll {
-            padding: 8px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-        }
-        .nav-pills .nav-link.active {
-            background-color: var(--violet);
-        }
-        .nav-pills .nav-link {
-            color: var(--violet);
-            font-weight: 500;
-        }
     </style>
 </head>
 <body>
-      <!-- Header will be inserted here -->
-  <div data-include="header.html"></div>
-
+      <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-violet navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i>ABC Coaching Classes
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- Hero Section -->
     <section class="hero-section py-5">
         <div class="container py-4">
@@ -467,8 +439,69 @@
         </div>
     </section>
 
-      <!-- Footer will be inserted here -->
-  <div data-include="footer.html"></div>
+      <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-warning mb-4"><i class="fas fa-graduation-cap me-2"></i>ABC Coaching Classes</h5>
+                    <p>Providing quality education since 2010 with a focus on conceptual understanding and academic excellence.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="text-warning mb-4">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">Courses</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h6 class="text-warning mb-4">Courses</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Primary School (1st-5th)</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Middle School (6th-8th)</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">High School (9th-10th)</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">11th Commerce</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">12th Commerce</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h6 class="text-warning mb-4">Contact Us</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-map-marker-alt text-warning mt-1 me-2"></i>
+                            <span>123 Education Street, Learning City, 400001</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-phone-alt text-warning mt-1 me-2"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <i class="fas fa-envelope text-warning mt-1 me-2"></i>
+                            <span>info@abccoaching.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2024 ABC Coaching Classes. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> for education</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
