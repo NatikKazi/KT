@@ -8,50 +8,121 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --mango-yellow: #FFD700;
-            --violet: #8A2BE2;
+            --primary-color: #6a0dad;       /* Deep Purple */
+            --secondary-color: #FFD700;     /* Gold */
+            --accent-color: #9c27b0;       /* Lighter Purple */
+            --light-bg: #f8f9fa;
+            --dark-text: #343a40;
         }
-        .bg-mango { background-color: var(--mango-yellow) !important; }
-        .bg-violet { background-color: var(--violet) !important; }
-        .text-violet { color: var(--violet) !important; }
+        
+        .bg-primary {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .bg-secondary {
+            background-color: var(--secondary-color) !important;
+        }
+        
+        .bg-accent {
+            background-color: var(--accent-color) !important;
+        }
+        
+        .bg-light-custom {
+            background-color: var(--light-bg) !important;
+        }
+        
+        .text-primary {
+            color: var(--primary-color) !important;
+        }
+        
+        .text-secondary {
+            color: var(--secondary-color) !important;
+        }
+        
         .hero-section {
-            background: linear-gradient(rgba(138, 43, 226, 0.8), rgba(138, 43, 226, 0.9)), 
+            background: linear-gradient(rgba(106, 13, 173, 0.9), rgba(106, 13, 173, 0.95)), 
                         url('images/classroom-group.jpg');
             background-size: cover;
             background-position: center;
             color: white;
         }
+        
+        .service-card {
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
         .img-cover {
             height: 100%;
             width: 100%;
             object-fit: cover;
         }
-        .service-card {
-            transition: transform 0.3s;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-        .service-icon {
-            width: 50px;
-            height: 50px;
-        }
-        .price-tag {
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
+        
         .discount-badge {
-            font-size: 0.8rem;
-            text-decoration: line-through;
-            color: #6c757d;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-weight: 600;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+        
+        .btn-secondary-custom {
+            background-color: var(--secondary-color);
+            color: var(--dark-text);
+            border: none;
+            padding: 10px 20px;
+            font-weight: 600;
+        }
+        
+        .btn-secondary-custom:hover {
+            background-color: #e6c200;
+            color: var(--dark-text);
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-card {
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-violet navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
                 <i class="fas fa-graduation-cap me-2"></i>ABC Coaching Classes
@@ -101,44 +172,122 @@
     <section id="courses" class="py-5">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold text-violet">Choose Your Learning Path</h2>
+                <h2 class="display-5 fw-bold text-primary">Choose Your Learning Path</h2>
                 <p class="lead text-muted">Structured programs for academic excellence</p>
             </div>
             
             <div class="row g-4">
-                <!-- Example for Primary School (1st-8th) -->
-<div class="d-flex justify-content-between align-items-center mt-auto">
-    <div>
-        <span class="badge bg-success mb-2">15% OFF</span>
-        <div class="price-tag text-violet">Annual Payment Discount</div>
-        <small class="text-muted">Limited time offer</small>
-    </div>
-    <a href="contact.html" class="btn bg-violet text-white">Enquire Now</a>
-</div>
+                <!-- Primary School (1st-8th) -->
+                <div class="col-lg-6">
+                    <div class="card service-card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <img src="images/primary-students.jpg" alt="Primary school students" class="img-cover">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-4 d-flex flex-column h-100">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="service-icon bg-secondary rounded-circle me-3">
+                                            <i class="fas fa-pencil-alt text-primary fs-4"></i>
+                                        </div>
+                                        <h4 class="card-title text-primary mb-0">Primary School (1st-8th)</h4>
+                                    </div>
+                                    <p class="card-text flex-grow-1">Personalized private tutoring for SSC & CBSE boards with foundational skill development.</p>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>One-on-one attention</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>All subjects (English medium)</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Concept building</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i>Regular progress reports</li>
+                                    </ul>
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div>
+                                            <span class="badge bg-success mb-2">15% OFF</span>
+                                            <div class="fw-bold text-primary">Annual Payment Discount</div>
+                                            <small class="text-muted">Limited time offer</small>
+                                        </div>
+                                        <a href="contact.html" class="btn btn-primary-custom">Enquire Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<!-- Example for 9th-10th SSC -->
-<div class="d-flex justify-content-between align-items-center mt-auto">
-    <div>
-        <span class="badge bg-danger mb-2">EARLY BIRD</span>
-        <div class="price-tag text-violet">Special Scholarship Available</div>
-        <small class="text-muted">For admissions before [date]</small>
-    </div>
-    <a href="contact.html" class="btn bg-violet text-white">Apply Now</a>
-</div>
+                <!-- 9th-10th SSC Batches -->
+                <div class="col-lg-6">
+                    <div class="card service-card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <img src="images/high-school.jpg" alt="High school students" class="img-cover">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-4 d-flex flex-column h-100">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="service-icon bg-secondary rounded-circle me-3">
+                                            <i class="fas fa-book text-primary fs-4"></i>
+                                        </div>
+                                        <h4 class="card-title text-primary mb-0">9th-10th SSC Batches</h4>
+                                    </div>
+                                    <p class="card-text flex-grow-1">Comprehensive SSC board preparation with focus on board exam patterns.</p>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Mathematics & Science</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>English & Social Studies</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Marathi (Optional)</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i>Board exam oriented tests</li>
+                                    </ul>
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div>
+                                            <span class="badge bg-danger mb-2">EARLY BIRD</span>
+                                            <div class="fw-bold text-primary">Special Scholarship Available</div>
+                                            <small class="text-muted">For admissions before June 30</small>
+                                        </div>
+                                        <a href="contact.html" class="btn btn-primary-custom">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<!-- Example for Commerce -->
-<div class="d-flex justify-content-between align-items-center mt-auto">
-    <div>
-        <span class="badge bg-warning text-dark mb-2">GROUP DISCOUNT</span>
-        <div class="price-tag text-violet">Save up to 20%</div>
-        <small class="text-muted">When joining with friends</small>
-    </div>
-    <a href="contact.html" class="btn bg-violet text-white">Know More</a>
-</div>
+                <!-- 11th-12th Commerce -->
+                <div class="col-lg-6">
+                    <div class="card service-card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <img src="images/commerce-students.jpg" alt="Commerce students" class="img-cover">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-4 d-flex flex-column h-100">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="service-icon bg-secondary rounded-circle me-3">
+                                            <i class="fas fa-calculator text-primary fs-4"></i>
+                                        </div>
+                                        <h4 class="card-title text-primary mb-0">11th-12th Commerce</h4>
+                                    </div>
+                                    <p class="card-text flex-grow-1">Specialized commerce education with practical approach to accounts and economics.</p>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Book Keeping & Accountancy</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Economics & Business Studies</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Mathematics & Statistics</li>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i>Board exam preparation</li>
+                                    </ul>
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div>
+                                            <span class="badge bg-warning text-dark mb-2">GROUP DISCOUNT</span>
+                                            <div class="fw-bold text-primary">Save up to 20%</div>
+                                            <small class="text-muted">When joining with friends</small>
+                                        </div>
+                                        <a href="contact.html" class="btn btn-primary-custom">Know More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Science & Math Special -->
                 <div class="col-lg-6">
-                    <div class="card service-card h-100 shadow-sm">
+                    <div class="card service-card h-100">
                         <div class="row g-0 h-100">
                             <div class="col-md-5">
                                 <img src="images/science-lab.jpg" alt="Science students" class="img-cover">
@@ -146,10 +295,10 @@
                             <div class="col-md-7">
                                 <div class="card-body p-4 d-flex flex-column h-100">
                                     <div class="d-flex align-items-center mb-3">
-                                        <div class="service-icon bg-mango rounded-circle me-3 d-flex align-items-center justify-content-center">
-                                            <i class="fas fa-flask text-violet fs-4"></i>
+                                        <div class="service-icon bg-secondary rounded-circle me-3">
+                                            <i class="fas fa-flask text-primary fs-4"></i>
                                         </div>
-                                        <h4 class="card-title text-violet mb-0">Science & Math Special</h4>
+                                        <h4 class="card-title text-primary mb-0">Science & Math Special</h4>
                                     </div>
                                     <p class="card-text flex-grow-1">Advanced program for students excelling in scientific subjects.</p>
                                     <ul class="list-unstyled mb-4">
@@ -160,10 +309,11 @@
                                     </ul>
                                     <div class="d-flex justify-content-between align-items-center mt-auto">
                                         <div>
-                                            <span class="price-tag text-violet">Special package</span><br>
-                                            <small class="discount-badge">For school toppers</small>
+                                            <span class="badge bg-info mb-2">SPECIAL OFFER</span>
+                                            <div class="fw-bold text-primary">Merit-based Scholarships</div>
+                                            <small class="text-muted">For school toppers</small>
                                         </div>
-                                        <a href="contact.html" class="btn bg-violet text-white">Enquire Now</a>
+                                        <a href="contact.html" class="btn btn-primary-custom">Enquire Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -175,18 +325,18 @@
     </section>
 
     <!-- Special Programs Section -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light-custom">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="badge bg-violet text-white mb-3">Special Programs</span>
-                <h2 class="display-5 fw-bold text-violet">Additional Learning Options</h2>
+                <span class="badge bg-primary mb-3">Special Programs</span>
+                <h2 class="display-5 fw-bold text-primary">Additional Learning Options</h2>
                 <p class="lead text-muted">Enhance your skills beyond academics</p>
             </div>
             
             <div class="row g-4">
                 <!-- Language Learning -->
                 <div class="col-md-6">
-                    <div class="card service-card h-100 shadow-sm">
+                    <div class="card service-card h-100">
                         <div class="row g-0 h-100">
                             <div class="col-md-5">
                                 <img src="images/language-class.jpg" alt="Language learning" class="img-cover">
@@ -194,10 +344,10 @@
                             <div class="col-md-7">
                                 <div class="card-body p-4 d-flex flex-column h-100">
                                     <div class="d-flex align-items-center mb-3">
-                                        <div class="service-icon bg-mango rounded-circle me-3 d-flex align-items-center justify-content-center">
-                                            <i class="fas fa-language text-violet fs-4"></i>
+                                        <div class="service-icon bg-secondary rounded-circle me-3">
+                                            <i class="fas fa-language text-primary fs-4"></i>
                                         </div>
-                                        <h4 class="card-title text-violet mb-0">Language Classes</h4>
+                                        <h4 class="card-title text-primary mb-0">Language Classes</h4>
                                     </div>
                                     <p class="card-text flex-grow-1">Master communication skills in multiple languages with our expert faculty.</p>
                                     <ul class="list-unstyled mb-4">
@@ -208,10 +358,11 @@
                                     </ul>
                                     <div class="d-flex justify-content-between align-items-center mt-auto">
                                         <div>
-                                            <span class="price-tag text-violet">Flexible batches</span><br>
-                                            <small class="discount-badge">Group discounts available</small>
+                                            <span class="badge bg-success mb-2">FLEXIBLE</span>
+                                            <div class="fw-bold text-primary">Customizable Schedule</div>
+                                            <small class="text-muted">Group discounts available</small>
                                         </div>
-                                        <a href="contact.html" class="btn bg-violet text-white">Know More</a>
+                                        <a href="contact.html" class="btn btn-primary-custom">Know More</a>
                                     </div>
                                 </div>
                             </div>
@@ -221,7 +372,7 @@
 
                 <!-- Weekend Workshops -->
                 <div class="col-md-6">
-                    <div class="card service-card h-100 shadow-sm">
+                    <div class="card service-card h-100">
                         <div class="row g-0 h-100">
                             <div class="col-md-5">
                                 <img src="images/weekend-workshop.jpg" alt="Weekend workshop" class="img-cover">
@@ -229,10 +380,10 @@
                             <div class="col-md-7">
                                 <div class="card-body p-4 d-flex flex-column h-100">
                                     <div class="d-flex align-items-center mb-3">
-                                        <div class="service-icon bg-mango rounded-circle me-3 d-flex align-items-center justify-content-center">
-                                            <i class="fas fa-calendar-alt text-violet fs-4"></i>
+                                        <div class="service-icon bg-secondary rounded-circle me-3">
+                                            <i class="fas fa-calendar-alt text-primary fs-4"></i>
                                         </div>
-                                        <h4 class="card-title text-violet mb-0">Weekend Workshops</h4>
+                                        <h4 class="card-title text-primary mb-0">Weekend Workshops</h4>
                                     </div>
                                     <p class="card-text flex-grow-1">Skill-building sessions conducted every Saturday for holistic development.</p>
                                     <ul class="list-unstyled mb-4">
@@ -243,10 +394,11 @@
                                     </ul>
                                     <div class="d-flex justify-content-between align-items-center mt-auto">
                                         <div>
-                                            <span class="price-tag text-violet">Pay per workshop</span><br>
-                                            <small class="discount-badge">Package deals available</small>
+                                            <span class="badge bg-primary mb-2">NEW</span>
+                                            <div class="fw-bold text-primary">Pay Per Workshop</div>
+                                            <small class="text-muted">Package deals available</small>
                                         </div>
-                                        <a href="contact.html" class="btn bg-violet text-white">View Schedule</a>
+                                        <a href="contact.html" class="btn btn-primary-custom">View Schedule</a>
                                     </div>
                                 </div>
                             </div>
@@ -261,43 +413,43 @@
     <section class="py-5">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold text-violet">Our Unique Advantages</h2>
+                <h2 class="display-5 fw-bold text-primary">Our Unique Advantages</h2>
                 <p class="lead text-muted">What sets us apart from others</p>
             </div>
             <div class="row g-4">
                 <div class="col-md-3">
                     <div class="card border-0 text-center p-4 h-100 shadow-sm">
-                        <div class="feature-icon bg-mango rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center">
-                            <i class="fas fa-chalkboard-teacher text-violet fs-3"></i>
+                        <div class="feature-icon bg-secondary rounded-circle mx-auto d-flex align-items-center justify-content-center">
+                            <i class="fas fa-chalkboard-teacher text-primary fs-3"></i>
                         </div>
-                        <h5 class="text-violet">Expert Faculty</h5>
+                        <h5 class="text-primary">Expert Faculty</h5>
                         <p class="text-muted">15+ years average teaching experience with subject matter experts</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card border-0 text-center p-4 h-100 shadow-sm">
-                        <div class="feature-icon bg-mango rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center">
-                            <i class="fas fa-users text-violet fs-3"></i>
+                        <div class="feature-icon bg-secondary rounded-circle mx-auto d-flex align-items-center justify-content-center">
+                            <i class="fas fa-users text-primary fs-3"></i>
                         </div>
-                        <h5 class="text-violet">Small Batches</h5>
+                        <h5 class="text-primary">Small Batches</h5>
                         <p class="text-muted">Limited to 15 students per batch for personalized attention</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card border-0 text-center p-4 h-100 shadow-sm">
-                        <div class="feature-icon bg-mango rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center">
-                            <i class="fas fa-chart-line text-violet fs-3"></i>
+                        <div class="feature-icon bg-secondary rounded-circle mx-auto d-flex align-items-center justify-content-center">
+                            <i class="fas fa-chart-line text-primary fs-3"></i>
                         </div>
-                        <h5 class="text-violet">Performance Tracking</h5>
+                        <h5 class="text-primary">Performance Tracking</h5>
                         <p class="text-muted">Regular assessments with detailed analytics and improvement plans</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card border-0 text-center p-4 h-100 shadow-sm">
-                        <div class="feature-icon bg-mango rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center">
-                            <i class="fas fa-trophy text-violet fs-3"></i>
+                        <div class="feature-icon bg-secondary rounded-circle mx-auto d-flex align-items-center justify-content-center">
+                            <i class="fas fa-trophy text-primary fs-3"></i>
                         </div>
-                        <h5 class="text-violet">Proven Results</h5>
+                        <h5 class="text-primary">Proven Results</h5>
                         <p class="text-muted">90%+ of our students achieve their academic goals</p>
                     </div>
                 </div>
@@ -306,15 +458,15 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light-custom">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold text-violet">Success Stories</h2>
+                <h2 class="display-5 fw-bold text-primary">Success Stories</h2>
                 <p class="lead text-muted">Hear from our students and parents</p>
             </div>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
+                    <div class="card border-0 h-100 shadow-sm">
                         <div class="card-body p-4">
                             <div class="mb-3 text-warning">
                                 <i class="fas fa-star"></i>
@@ -327,7 +479,7 @@
                             <div class="d-flex align-items-center">
                                 <img src="images/parent1.jpg" alt="Parent" class="rounded-circle me-3" width="50" height="50">
                                 <div>
-                                    <h6 class="mb-0 text-violet">Mrs. Sharma</h6>
+                                    <h6 class="mb-0 text-primary">Mrs. Sharma</h6>
                                     <small class="text-muted">Parent of 10th Grade Student</small>
                                 </div>
                             </div>
@@ -335,7 +487,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
+                    <div class="card border-0 h-100 shadow-sm">
                         <div class="card-body p-4">
                             <div class="mb-3 text-warning">
                                 <i class="fas fa-star"></i>
@@ -348,7 +500,7 @@
                             <div class="d-flex align-items-center">
                                 <img src="images/student1.jpg" alt="Student" class="rounded-circle me-3" width="50" height="50">
                                 <div>
-                                    <h6 class="mb-0 text-violet">Rahul Verma</h6>
+                                    <h6 class="mb-0 text-primary">Rahul Verma</h6>
                                     <small class="text-muted">12th Commerce (98 in Accounts)</small>
                                 </div>
                             </div>
@@ -356,7 +508,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
+                    <div class="card border-0 h-100 shadow-sm">
                         <div class="card-body p-4">
                             <div class="mb-3 text-warning">
                                 <i class="fas fa-star"></i>
@@ -369,7 +521,7 @@
                             <div class="d-flex align-items-center">
                                 <img src="images/parent2.jpg" alt="Parent" class="rounded-circle me-3" width="50" height="50">
                                 <div>
-                                    <h6 class="mb-0 text-violet">Mr. Patel</h6>
+                                    <h6 class="mb-0 text-primary">Mr. Patel</h6>
                                     <small class="text-muted">Parent of 8th Grade Student</small>
                                 </div>
                             </div>
@@ -381,7 +533,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-5 bg-violet text-white">
+    <section class="py-5 bg-primary text-white">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 mb-4 mb-lg-0">
@@ -389,7 +541,7 @@
                     <p class="mb-0">Join hundreds of successful students who achieved their dreams with our guidance.</p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
-                    <a href="contact.html" class="btn bg-mango text-dark fw-bold px-4 py-3">Get Started Today <i class="fas fa-arrow-right ms-2"></i></a>
+                    <a href="contact.html" class="btn btn-secondary-custom px-4 py-3">Get Started Today <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
         </div>
@@ -400,7 +552,7 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
-                    <h5 class="text-warning mb-4"><i class="fas fa-graduation-cap me-2"></i>ABC Coaching Classes</h5>
+                    <h5 class="text-secondary mb-4"><i class="fas fa-graduation-cap me-2"></i>ABC Coaching Classes</h5>
                     <p>Providing quality education since 2010 with a focus on conceptual understanding and academic excellence.</p>
                     <div class="d-flex gap-3 mt-4">
                         <a href="#" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
@@ -410,7 +562,7 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4">
-                    <h6 class="text-warning mb-4">Quick Links</h6>
+                    <h6 class="text-secondary mb-4">Quick Links</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
                         <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
@@ -420,7 +572,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-4">
-                    <h6 class="text-warning mb-4">Courses</h6>
+                    <h6 class="text-secondary mb-4">Courses</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="#" class="text-white text-decoration-none">Primary (1st-8th)</a></li>
                         <li class="mb-2"><a href="#" class="text-white text-decoration-none">9th-10th SSC</a></li>
@@ -430,18 +582,18 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-4">
-                    <h6 class="text-warning mb-4">Contact Us</h6>
+                    <h6 class="text-secondary mb-4">Contact Us</h6>
                     <ul class="list-unstyled">
                         <li class="mb-3 d-flex align-items-start">
-                            <i class="fas fa-map-marker-alt text-warning mt-1 me-2"></i>
+                            <i class="fas fa-map-marker-alt text-secondary mt-1 me-2"></i>
                             <span>123 Education Street, Mumbai, 400001</span>
                         </li>
                         <li class="mb-3 d-flex align-items-start">
-                            <i class="fas fa-phone-alt text-warning mt-1 me-2"></i>
+                            <i class="fas fa-phone-alt text-secondary mt-1 me-2"></i>
                             <span>+91 98765 43210</span>
                         </li>
                         <li class="d-flex align-items-start">
-                            <i class="fas fa-envelope text-warning mt-1 me-2"></i>
+                            <i class="fas fa-envelope text-secondary mt-1 me-2"></i>
                             <span>info@abccoaching.com</span>
                         </li>
                     </ul>
