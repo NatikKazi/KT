@@ -3,207 +3,256 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - XYZ Coaching Classes</title>
+  <meta name="description" content="Contact ABC Coaching Classes for admissions and inquiries. We provide quality education for 1st-12th grade students in Pune.">
+  <title>Contact Us | ABC Coaching Classes | Pune</title>
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" as="style">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+  
+  <!-- CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --mango-yellow: #FFD700;
-            --violet: #8A2BE2;
-        }
-        .bg-mango { background-color: var(--mango-yellow) !important; }
-        .bg-violet { background-color: var(--violet) !important; }
-        .text-violet { color: var(--violet) !important; }
-    </style>
+  
+  <style>
+    :root {
+      --primary: #8A2BE2; /* Violet */
+      --secondary: #FFD700; /* Gold */
+      --dark: #212529;
+    }
+    
+    .bg-primary { background-color: var(--primary) !important; }
+    .bg-secondary { background-color: var(--secondary) !important; }
+    .text-primary { color: var(--primary) !important; }
+    .text-secondary { color: var(--secondary) !important; }
+    
+    .contact-icon {
+      width: 80px; 
+      height: 80px;
+    }
+    
+    .map-container, .form-container {
+      min-height: 500px;
+    }
+    
+    .navbar-brand {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    
+    footer a {
+      transition: all 0.3s ease;
+    }
+    
+    footer a:hover {
+      color: var(--secondary) !important;
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
 <body>
-   <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-violet navbar-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <i class="fas fa-graduation-cap me-2"></i>ABC Coaching Classes
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">Courses</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-primary navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-graduation-cap me-2"></i>ABC Coaching Classes
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <!-- Page Header -->
-  <header class="bg-warning py-5">
+  <header class="bg-secondary py-5">
     <div class="container text-center">
       <h1 class="display-4 fw-bold text-primary mb-3">Contact Us</h1>
-      <p class="lead text-dark">Get in touch with us for admissions and inquiries</p>
+      <p class="lead text-dark mb-0">Reach out for admissions, inquiries, or to schedule a visit</p>
     </div>
   </header>
 
   <!-- Main Content -->
   <main class="container my-5">
+    <!-- Contact Cards -->
     <div class="row g-4 mb-5">
-      <!-- Contact Cards -->
-      <div class="col-lg-4">
+      <div class="col-md-4">
         <div class="card border-0 shadow-sm h-100">
           <div class="card-body text-center p-4">
-            <div class="bg-warning rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+            <div class="bg-secondary rounded-circle contact-icon d-inline-flex align-items-center justify-content-center mb-3">
               <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
             </div>
-            <h5 class="text-primary mb-3">Visit Us</h5>
+            <h3 class="h5 text-primary mb-3">Our Location</h3>
             <address class="text-muted mb-0">
-              XYZ Coaching Classes<br>
+              ABC Coaching Classes<br>
               Shop No. 15-16, 2nd Floor<br>
               Educational Complex, FC Road<br>
-              Pune, Maharashtra 411005<br>
-              India
+              Pune, Maharashtra 411005
             </address>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-md-4">
         <div class="card border-0 shadow-sm h-100">
           <div class="card-body text-center p-4">
-            <div class="bg-warning rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+            <div class="bg-secondary rounded-circle contact-icon d-inline-flex align-items-center justify-content-center mb-3">
               <i class="fas fa-phone fa-2x text-primary"></i>
             </div>
-            <h5 class="text-primary mb-3">Call Us</h5>
-            <p class="text-muted mb-2">
-              <strong>Main Office:</strong><br>
-              +91 98765 43210<br>
-              +91 87654 32109
-            </p>
-            <p class="text-muted mb-0">
-              <strong>Admission Helpline:</strong><br>
-              +91 76543 21098
-            </p>
+            <h3 class="h5 text-primary mb-3">Call Us</h3>
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-2">
+                <strong>Main Office:</strong><br>
+                +91 98765 43210
+              </li>
+              <li>
+                <strong>Admission Helpline:</strong><br>
+                +91 76543 21098
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-md-4">
         <div class="card border-0 shadow-sm h-100">
           <div class="card-body text-center p-4">
-            <div class="bg-warning rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+            <div class="bg-secondary rounded-circle contact-icon d-inline-flex align-items-center justify-content-center mb-3">
               <i class="fas fa-envelope fa-2x text-primary"></i>
             </div>
-            <h5 class="text-primary mb-3">Email Us</h5>
-            <p class="text-muted mb-0">
-              <strong>General Inquiries:</strong><br>
-              info@xyzcoaching.com<br><br>
-              <strong>Admissions:</strong><br>
-              admissions@xyzcoaching.com
-            </p>
+            <h3 class="h5 text-primary mb-3">Email Us</h3>
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-2">
+                <strong>General Inquiries:</strong><br>
+                info@abccoaching.com
+              </li>
+              <li>
+                <strong>Admissions:</strong><br>
+                admissions@abccoaching.com
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Google Form and Maps Section -->
-    <div class="row mb-5">
-      <!-- Google Form on the left -->
-      <div class="col-lg-6 mb-4 mb-lg-0">
+    <div class="row g-4 mb-5">
+      <div class="col-lg-6">
         <div class="card shadow-sm h-100">
-          <div class="card-body p-0 d-flex flex-column">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd8zQ5Xx5y5y5y5y5y5y5y5y5y5y5y5y5y5y5y5y5y5y5y5y5y5/viewform?embedded=true" 
-              class="flex-grow-1" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          <div class="card-header bg-primary text-white">
+            <h2 class="h5 mb-0">Enquiry Form</h2>
+          </div>
+          <div class="card-body p-0 form-container">
+            <iframe 
+              src="https://docs.google.com/forms/d/e/1FAIpQLSf1zYtkOXsczvHuSGgSKQbZuPzpGi5hIgo0VnvRx7osQJyuDw/viewform"
+              class="w-100 h-100 border-0"
+              loading="lazy"
+              title="ABC Coaching Classes Contact Form"
+              allowfullscreen>
+            </iframe>
           </div>
         </div>
       </div>
       
-      <!-- Google Maps on the right -->
       <div class="col-lg-6">
         <div class="card shadow-sm h-100">
-          <div class="card-body p-0">
-            <div class="ratio ratio-16x9">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.265588856342!2d73.91455641541671!3d18.562061287384868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c147b8b3a3bf%3A0x6f7fdcc8e4d6c77e!2sFC%20Road%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
-                allowfullscreen="" loading="lazy"></iframe>
-            </div>
+          <div class="card-header bg-primary text-white">
+            <h2 class="h5 mb-0">Our Location</h2>
+          </div>
+          <div class="card-body p-0 map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.265588856342!2d73.91455641541671!3d18.562061287384868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c147b8b3a3bf%3A0x6f7fdcc8e4d6c77e!2sFC%20Road%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+              class="w-100 h-100 border-0"
+              loading="lazy"
+              title="ABC Coaching Classes Location"
+              allowfullscreen>
+            </iframe>
           </div>
         </div>
       </div>
     </div>
   </main>
 
-   <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-3">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <h5 class="text-warning mb-4"><i class="fas fa-graduation-cap me-2"></i>ABC Coaching Classes</h5>
-                    <p>Providing quality education since 2010 with a focus on conceptual understanding and academic excellence.</p>
-                    <div class="d-flex gap-3 mt-4">
-                        <a href="#" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-youtube fa-lg"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4">
-                    <h6 class="text-warning mb-4">Quick Links</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
-                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
-                        <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">Courses</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-4">
-                    <h6 class="text-warning mb-4">Courses</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Primary School (1st-5th)</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Middle School (6th-8th)</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">High School (9th-10th)</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">11th Commerce</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">12th Commerce</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-4">
-                    <h6 class="text-warning mb-4">Contact Us</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-3 d-flex align-items-start">
-                            <i class="fas fa-map-marker-alt text-warning mt-1 me-2"></i>
-                            <span>123 Education Street, Learning City, 400001</span>
-                        </li>
-                        <li class="mb-3 d-flex align-items-start">
-                            <i class="fas fa-phone-alt text-warning mt-1 me-2"></i>
-                            <span>+91 98765 43210</span>
-                        </li>
-                        <li class="d-flex align-items-start">
-                            <i class="fas fa-envelope text-warning mt-1 me-2"></i>
-                            <span>info@abccoaching.com</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <hr class="my-4 bg-secondary">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2024 ABC Coaching Classes. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> for education</p>
-                </div>
-            </div>
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <h3 class="h5 text-secondary mb-4">
+            <i class="fas fa-graduation-cap me-2"></i>ABC Coaching Classes
+          </h3>
+          <p>Providing quality education since 2010 with a focus on conceptual understanding and academic excellence for 1st-12th grade students.</p>
+          <div class="social-links mt-4">
+            <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#" class="text-white me-3" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-white me-3" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+            <a href="#" class="text-white" aria-label="WhatsApp"><i class="fab fa-whatsapp fa-lg"></i></a>
+          </div>
         </div>
-    </footer>
+        
+        <div class="col-lg-2 col-md-4">
+          <h4 class="h6 text-secondary mb-4">Quick Links</h4>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-white">Home</a></li>
+            <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-white">About Us</a></li>
+            <li class="nav-item mb-2"><a href="services.html" class="nav-link p-0 text-white">Courses</a></li>
+            <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-white">Contact</a></li>
+            <li class="nav-item"><a href="#" class="nav-link p-0 text-white">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-3 col-md-4">
+          <h4 class="h6 text-secondary mb-4">Our Courses</h4>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Primary (1st-5th)</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Middle School (6th-8th)</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">High School (9th-10th)</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">11th Commerce</a></li>
+            <li class="nav-item"><a href="#" class="nav-link p-0 text-white">12th Commerce</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-3 col-md-4">
+          <h4 class="h6 text-secondary mb-4">Contact Info</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3 d-flex">
+              <i class="fas fa-map-marker-alt text-secondary mt-1 me-2"></i>
+              <span>Shop No. 15-16, FC Road, Pune 411005</span>
+            </li>
+            <li class="mb-3 d-flex">
+              <i class="fas fa-phone-alt text-secondary mt-1 me-2"></i>
+              <span>+91 98765 43210</span>
+            </li>
+            <li class="d-flex">
+              <i class="fas fa-envelope text-secondary mt-1 me-2"></i>
+              <span>info@abccoaching.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <hr class="my-4 bg-secondary">
+      
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; 2024 ABC Coaching Classes. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> for education</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  <!-- Include the includes.js script -->
-  <script src="includes.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>

@@ -52,3 +52,41 @@ document.getElementById("enquiryForm").addEventListener("submit", async (e) => {
     alert("Error submitting form");
   }
 });
+
+
+// Function to include HTML
+async function includeHTML() {
+  const includes = document.querySelectorAll('[data-include]');
+  
+  for (const element of includes) {
+    const file = element.getAttribute('data-include');
+    
+    try {
+      const response = await fetch(file);
+      if (!response.ok) throw new Error(`${file} not found`);
+      const data = await response.text();
+      element.innerHTML = data;
+
+      // Set active nav link
+      if (file === 'header.html') {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = element.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+          const linkPage = link.getAttribute('href').split('/').pop();
+          link.classList.toggle('active', currentPage === linkPage);
+        });
+      }
+    } catch (error) {
+      console.error('Error including HTML:', error);
+      element.innerHTML = `Error loading ${file}`;
+    }
+  }
+}
+
+// Call when DOM is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', includeHTML);
+} else {
+  includeHTML();
+}
